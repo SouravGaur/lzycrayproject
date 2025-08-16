@@ -101,6 +101,8 @@ export default function OlxFormTailwind() {
     state: "",
     city: "",
     neighbourhood: "",
+    sellerName: "",
+    phoneNumber: "",
   });
 
   const [images, setImages] = useState(Array(20).fill(null));
@@ -160,6 +162,8 @@ export default function OlxFormTailwind() {
         state: "",
         city: "",
         neighbourhood: "",
+        sellerName: "",
+        phoneNumber: "",
       });
       setImages(Array(20).fill(null));
     } catch (error) {
@@ -494,6 +498,36 @@ export default function OlxFormTailwind() {
                 name="neighbourhood"
                 value={formValues.neighbourhood}
                 onChange={handleChange}
+                className="block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-400 focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600/20"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-2">
+          <h3 className="text-lg font-semibold text-gray-900">Your details</h3>
+          <div className="mt-3 grid max-w-md grid-cols-1 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-800 mb-2">Name</label>
+              <input
+                type="text"
+                name="sellerName"
+                value={formValues.sellerName}
+                onChange={handleChange}
+                placeholder="Your name"
+                className="block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-400 focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600/20"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-800 mb-2">Mobile Phone Number</label>
+              <input
+                required
+                type="tel"
+                inputMode="tel"
+                name="phoneNumber"
+                value={formValues.phoneNumber}
+                onChange={handleChange}
+                placeholder="+91XXXXXXXXXX"
                 className="block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-400 focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600/20"
               />
             </div>
