@@ -573,13 +573,48 @@ export default function Upload() {
                   <label className="block text-sm font-semibold text-gray-700">
                     City*
                   </label>
-                  <input
-                    type="text"
+                  <select
+                    value={city}
                     onChange={(e) => setCity(e.target.value)}
                     className="w-full mt-1 p-3 border rounded-lg focus:ring focus:ring-blue-400"
                     required
-                  />
-                    
+                  >
+                    <option value="">Select City</option>
+
+                    {/* Conditional rendering for cities based on the selected state */}
+                    {state === "Rajasthan" && (
+                      <>
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Udaipur">Udaipur</option>
+                        <option value="Jodhpur">Jodhpur</option>
+                      </>
+                    )}
+
+                    {state === "Delhi" && (
+                      <>
+                        <option value="New Delhi">New Delhi</option>
+                        <option value="Gurgaon">Gurgaon</option>
+                        <option value="Noida">Noida</option>
+                      </>
+                    )}
+
+                    {state === "Maharashtra" && (
+                      <>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Nagpur">Nagpur</option>
+                      </>
+                    )}
+
+                    {/* Add more states and their cities here as needed */}
+                  </select>
+                  {city === "" && (
+                    <p className="text-red-500 text-xs mt-1">
+                      This field is mandatory
+                    </p>
+                  )}
+                </div>
+              )}
 
               {/* Conditional Rendering for Neighbourhood */}
               {city && (
