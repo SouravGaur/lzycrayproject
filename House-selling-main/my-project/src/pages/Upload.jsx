@@ -517,9 +517,48 @@ export default function Upload() {
                   required
                 >
                   <option value="">Select State</option>
-                  <option value="Rajasthan">Rajasthan</option>
-                  <option value="Delhi">Delhi</option>
+                  <option value="Andhra Pradesh">Andhra Pradesh</option>
+                  <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                  <option value="Assam">Assam</option>
+                  <option value="Bihar">Bihar</option>
+                  <option value="Chhattisgarh">Chhattisgarh</option>
+                  <option value="Goa">Goa</option>
+                  <option value="Gujarat">Gujarat</option>
+                  <option value="Haryana">Haryana</option>
+                  <option value="Himachal Pradesh">Himachal Pradesh</option>
+                  <option value="Jharkhand">Jharkhand</option>
+                  <option value="Karnataka">Karnataka</option>
+                  <option value="Kerala">Kerala</option>
+                  <option value="Madhya Pradesh">Madhya Pradesh</option>
                   <option value="Maharashtra">Maharashtra</option>
+                  <option value="Manipur">Manipur</option>
+                  <option value="Meghalaya">Meghalaya</option>
+                  <option value="Mizoram">Mizoram</option>
+                  <option value="Nagaland">Nagaland</option>
+                  <option value="Odisha">Odisha</option>
+                  <option value="Punjab">Punjab</option>
+                  <option value="Rajasthan">Rajasthan</option>
+                  <option value="Sikkim">Sikkim</option>
+                  <option value="Tamil Nadu">Tamil Nadu</option>
+                  <option value="Telangana">Telangana</option>
+                  <option value="Tripura">Tripura</option>
+                  <option value="Uttar Pradesh">Uttar Pradesh</option>
+                  <option value="Uttarakhand">Uttarakhand</option>
+                  <option value="West Bengal">West Bengal</option>
+
+                  {/* Union Territories */}
+                  <option value="Andaman and Nicobar Islands">
+                    Andaman and Nicobar Islands
+                  </option>
+                  <option value="Chandigarh">Chandigarh</option>
+                  <option value="Dadra and Nagar Haveli and Daman and Diu">
+                    Dadra and Nagar Haveli and Daman and Diu
+                  </option>
+                  <option value="Delhi">Delhi</option>
+                  <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                  <option value="Ladakh">Ladakh</option>
+                  <option value="Lakshadweep">Lakshadweep</option>
+                  <option value="Puducherry">Puducherry</option>
                 </select>
                 {state === "" && (
                   <p className="text-red-500 text-xs mt-1">
@@ -534,48 +573,13 @@ export default function Upload() {
                   <label className="block text-sm font-semibold text-gray-700">
                     City*
                   </label>
-                  <select
-                    value={city}
+                  <input
+                    type="text"
                     onChange={(e) => setCity(e.target.value)}
                     className="w-full mt-1 p-3 border rounded-lg focus:ring focus:ring-blue-400"
                     required
-                  >
-                    <option value="">Select City</option>
-
-                    {/* Conditional rendering for cities based on the selected state */}
-                    {state === "Rajasthan" && (
-                      <>
-                        <option value="Jaipur">Jaipur</option>
-                        <option value="Udaipur">Udaipur</option>
-                        <option value="Jodhpur">Jodhpur</option>
-                      </>
-                    )}
-
-                    {state === "Delhi" && (
-                      <>
-                        <option value="New Delhi">New Delhi</option>
-                        <option value="Gurgaon">Gurgaon</option>
-                        <option value="Noida">Noida</option>
-                      </>
-                    )}
-
-                    {state === "Maharashtra" && (
-                      <>
-                        <option value="Mumbai">Mumbai</option>
-                        <option value="Pune">Pune</option>
-                        <option value="Nagpur">Nagpur</option>
-                      </>
-                    )}
-
-                    {/* Add more states and their cities here as needed */}
-                  </select>
-                  {city === "" && (
-                    <p className="text-red-500 text-xs mt-1">
-                      This field is mandatory
-                    </p>
-                  )}
-                </div>
-              )}
+                  />
+                    
 
               {/* Conditional Rendering for Neighbourhood */}
               {city && (
