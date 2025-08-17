@@ -3,7 +3,7 @@ import { Property } from "../model/property.model.js";
 // Create a new property
 export const createProperty = async (req, res) => {
   try {
-    const BASE_URL = "http://localhost:8000";
+    const BASE_URL = "https://lzycrayproject-backend.onrender.com";
     const imagePaths = req.files.map(
       (file) => `${BASE_URL}/uploads/${file.filename}`
     );
