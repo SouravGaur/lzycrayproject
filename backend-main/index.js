@@ -13,7 +13,7 @@ app.use(express.json());
 // app.use(cors());
 app.use(
   cors({
-    origin: "http://localhost:5173", // frontend origin
+    origin: "https://lzycrayproject-client.onrender.com", // frontend origin
     credentials: true, // allow cookies/auth headers
   })
 );
