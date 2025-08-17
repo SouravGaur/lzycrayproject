@@ -32,11 +32,7 @@ const propertySchema = new mongoose.Schema(
     maintenance: { type: Number },
     totalFloors: { type: Number },
     floorNo: { type: String },
-    carParking: {
-      type: String,
-      required: true,
-      enum: ["0", "1", "2", "3", "3+"],
-    },
+    carParking: { type: String, required: true, enum: ["0", "1", "2", "3+"] },
     facing: {
       type: String,
       enum: [
@@ -53,7 +49,7 @@ const propertySchema = new mongoose.Schema(
     projectName: { type: String },
     description: { type: String },
     title: { type: String, required: true },
-    price: { type: Number, required: true },
+    price: { type: String, required: true },
     images: {
       type: [String],
       validate: {
@@ -69,6 +65,7 @@ const propertySchema = new mongoose.Schema(
     neighbourhood: { type: String, required: true },
     sellerName: { type: String, required: true },
     phoneNumber: { type: String, required: true },
+    subcategory: { type: String, required: true },
   },
   { timestamps: true }
 );
