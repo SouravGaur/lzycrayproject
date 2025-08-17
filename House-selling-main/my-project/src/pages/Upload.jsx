@@ -59,7 +59,7 @@ export default function Upload() {
   const [carParking, setCarParking] = useState("");
   const [facing, setFacing] = useState("");
   const [state, setState] = useState("");
-  const [name, setName] = useState("Harsh Yadav");
+  const [name, setName] = useState("Sourav Gaur");
   const [mobileNumber, setMobileNumber] = useState("");
   const [city, setCity] = useState("");
   const [neighbourhood, setNeighbourhood] = useState("");
@@ -582,37 +582,19 @@ export default function Upload() {
                     <option value="">Select City</option>
 
                     {/* Conditional rendering for cities based on the selected state */}
-                    {state === "Rajasthan" && (
-                      <>
-                        <option value="Jaipur">Jaipur</option>
-                        <option value="Udaipur">Udaipur</option>
-                        <option value="Jodhpur">Jodhpur</option>
-                      </>
-                    )}
-
-                    {state === "Delhi" && (
-                      <>
-                        <option value="New Delhi">New Delhi</option>
-                        <option value="Gurgaon">Gurgaon</option>
-                        <option value="Noida">Noida</option>
-                      </>
-                    )}
-
-                    {state === "Maharashtra" && (
-                      <>
-                        <option value="Mumbai">Mumbai</option>
-                        <option value="Pune">Pune</option>
-                        <option value="Nagpur">Nagpur</option>
-                      </>
-                    )}
-
-                    {/* Add more states and their cities here as needed */}
-                  </select>
-                  {city === "" && (
-                    <p className="text-red-500 text-xs mt-1">
-                      This field is mandatory
-                    </p>
-                  )}
+          {/* Conditional Rendering for City */}
+              {state && (
+                <div className="w-full">
+                  <label className="block text-sm font-semibold text-gray-700">
+                    City
+                  </label>
+                  <input
+                    type="text"
+                    value={city}
+                    onChange={(e) => setCity(e.target.value)}
+                    className="w-full mt-1 p-3 border rounded-lg focus:ring focus:ring-blue-400"
+                    placeholder="Enter neighbourhood or locality"
+                  />
                 </div>
               )}
 
