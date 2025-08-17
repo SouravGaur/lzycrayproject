@@ -100,7 +100,7 @@ export default function ProductPage() {
           <div className="bg-white p-6 rounded-xl shadow-md">
             <div className="flex justify-between items-center mb-2">
               <h2 className="text-3xl font-bold text-gray-900">
-                ₹{Number(project.price).toLocaleString()}
+                ₹{String(project.price).toLocaleString()}
               </h2>
               {/* Add heart/share icons here */}
               <div className="flex gap-2 text-gray-500">
