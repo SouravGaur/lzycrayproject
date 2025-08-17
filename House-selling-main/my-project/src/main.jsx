@@ -6,7 +6,7 @@ import App from "./App.jsx";
 import Home from "./pages/Home.jsx";
 import CategorySelector from "./pages/CategorySelector.jsx";
 import Upload from "./pages/Upload.jsx";
-import ProductPage from "./pages/productpage.jsx";
+import ProductPage from "./pages/ProductPage.jsx";
 import Category from "./pages/Category.jsx";
 
 createRoot(document.getElementById("root")).render(
