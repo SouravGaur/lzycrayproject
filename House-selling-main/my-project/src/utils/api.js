@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://lzycrayproject-backend.onrender.com",
+  baseURL: "https://lzycrayproject-backend.onrender.com/api/properties",
   withCredentials: true, // important when sending cookies or auth headers
 });
 
